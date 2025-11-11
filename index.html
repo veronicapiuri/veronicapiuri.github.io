@@ -358,6 +358,8 @@
         <div class="container mt-4" data-aos="fade-up">
           <h4 class="text-center">Soft Skills</h4>
           <div class="d-flex justify-content-between text-center flex-wrap gap-2">
+            <span>Flexibility</span>
+            <span>Creativity</span>
             <span>Leadership</span>
             <span>Problem Solving &amp; Accountability</span>
             <span>Communication with Stakeholders</span>
@@ -385,14 +387,7 @@
       <section id="resume" class="resume section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <h2>Resume</h2>
-          <p>
-            Data Scientist with 3 years of experience and a strong foundation in
-            Mechanical Engineering (BS) and Computer Science (MS). Skilled in
-            machine learning, data engineering, and analytics, with a proven
-            ability to translate complex data into actionable insights that
-            drive innovation and impact.
-          </p>
+
         </div>
         <!-- End Section Title -->
 
@@ -486,7 +481,7 @@
 
               <div class="resume-item" style="text-align: justify">
                 <h4>West Pomeranian University of Technology, Szczecin, Poland</h4>
-                <h5>2018 – 2023</h5>
+                <h5>2020 – 2023</h5>
                 <p>
                   <em>BSc in Automation and Robotics</em>
                 </p>
@@ -534,18 +529,17 @@
       <!-- 
       </section> /Certificates Section -->
 
-      <!-- Portfolio Section -->
+           <!-- Portfolio Section -->
       <section id="work" class="portfolio section bg-light py-5">
         <!-- Section Title -->
         <div
           class="container section-title text-center mb-5"
           data-aos="fade-up"
         >
-          <h2 class="display-4 text-dark">Projects & Certificates</h2>
+          <h2 class="display-4 text-dark">Projects &amp; Certificates</h2>
           <p class="lead text-muted">
-            Discover a curated collection of my standout projects, complemented
-            by courses and certifications that have enhanced my expertise and
-            expanded my skill set.
+            Selected projects and certifications related to backend engineering,
+            DevOps and AI implementation.
           </p>
         </div>
         <!-- End Section Title -->
@@ -562,1364 +556,268 @@
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              <!-- <li data-filter="*" class="filter-active btn btn-primary m-2">
-                All
-              </li> -->
-
-              <li
-                data-filter=".filter-tech"
-                class="filter-active btn btn-outline-primary m-2"
-              >
-                Tech Certs
-              </li>
               <li
                 data-filter=".filter-projects"
-                class="btn btn-outline-primary m-2"
+                class="filter-active btn btn-outline-primary m-2"
               >
                 Projects
               </li>
               <li
-                data-filter=".filter-soft"
+                data-filter=".filter-certificates"
                 class="btn btn-outline-primary m-2"
               >
-                Soft Certs
-              </li>
-              <li
-                data-filter=".filter-Endorsements"
-                class="btn btn-outline-primary m-2"
-              >
-                Endorsements
+                Certificates
               </li>
             </ul>
-            <!-- Sub-tabs only for Projects -->
-            <!-- <div id="project-sub-tabs" class="text-center mb-4 d-none">
-              <button
-                class="btn btn-outline-secondary m-1 sub-tab active"
-                data-subtab="all"
-              >
-                All
-              </button>
-              <button
-                class="btn btn-outline-secondary m-1 sub-tab"
-                data-subtab="ml"
-              >
-                ML & AI
-              </button>
-              <button
-                class="btn btn-outline-secondary m-1 sub-tab"
-                data-subtab="web"
-              >
-                Web Development
-              </button>
-              <button
-                class="btn btn-outline-secondary m-1 sub-tab"
-                data-subtab="data"
-              >
-                Data Projects
-              </button>
-            </div> -->
             <!-- End Portfolio Filters -->
 
+            <!-- Modal for viewing the project description-->
+            <div
+              class="modal fade"
+              id="projectModal"
+              tabindex="-1"
+              aria-labelledby="projectModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="projectModalLabel">
+                      Project Details
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body" style="text-align: justify">
+                    <h5 id="modalTitle"></h5>
+                    <p id="modalDescription" class="text-muted"></p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <script>
+              function openModal(title, description) {
+                document.getElementById("modalTitle").innerText = title;
+                document.getElementById("modalDescription").innerText =
+                  description;
+              }
+            </script>
+
+            <!-- PROJECTS -->
             <div
               class="row gy-4 isotope-container"
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              <script>
-                function openFullscreen() {
-                  var iframe = document.querySelector("iframe");
-                  if (iframe.requestFullscreen) {
-                    iframe.requestFullscreen();
-                  } else if (iframe.mozRequestFullScreen) {
-                    // Firefox
-                    iframe.mozRequestFullScreen();
-                  } else if (iframe.webkitRequestFullscreen) {
-                    // Chrome, Safari, and Opera
-                    iframe.webkitRequestFullscreen();
-                  } else if (iframe.msRequestFullscreen) {
-                    // IE/Edge
-                    iframe.msRequestFullscreen();
-                  }
-                }
-              </script>
-              <!-- Modal for viewing the project description-->
+              <!-- Smart Farm Automation Platform -->
               <div
-                class="modal fade"
-                id="projectModal"
-                tabindex="-1"
-                aria-labelledby="projectModalLabel"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="projectModalLabel">
-                        Project Description
-                      </h5>
-                      <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                      ></button>
-                    </div>
-                    <div class="modal-body" style="text-align: justify">
-                      <!-- Modal content will be dynamically injected here -->
-                      <h5 id="modalTitle"></h5>
-                      <p id="modalDescription" class="text-muted"></p>
-                    </div>
-                    <div class="modal-footer">
-                      <button
-                        type="button"
-                        class="btn btn-secondary"
-                        data-bs-dismiss="modal"
-                      >
-                        Close
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <script>
-                function openModal(title, description) {
-                  // Set the modal title and description dynamically
-                  document.getElementById("modalTitle").innerText = title;
-                  document.getElementById("modalDescription").innerText =
-                    description;
-                }
-              </script>
-
-              <!-- Domestic Flight Delay Prediction with Incremental LightGBM -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects sub-ml"
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects"
                 style="text-align: justify"
               >
-                <div class="card shadow-sm p-3">
-                  <div class="card-body">
-                    <h4 class="card-title">
-                      Domestic Flight Delay Prediction with Incremental LightGBM
-                    </h4>
+                <div class="card shadow-sm p-3 h-100">
+                  <div class="card-body d-flex flex-column">
+                    <h4 class="card-title">Smart Farm Automation Platform</h4>
                     <p class="card-text text-muted mb-1">
-                      Regression model predicting domestic flight delays and
-                      Incremental training
+                      IoT-based automation platform combining on-prem devices
+                      with GCP services for monitoring and control.
                     </p>
-
-                    <p class="text-secondary small mb-2">
-                      <i class="bi bi-calendar-event"></i> June 2025
+                    <p class="text-secondary small mb-3">
+                      <i class="bi bi-calendar-event"></i> 2025 – Bylandbruget
+                      Baggaarden
                     </p>
-                    <!-- Buttons Container -->
-                    <div class="button-container">
-                      <a
-                        href="https://github.com/Mohammadalshurbaji/python-crash-review"
-                        class="btn btn-outline-secondary btn-sm"
-                        target="_blank"
-                      >
-                        <i class="bi bi-github"></i> GitHub Repo
-                      </a>
-
-                      <!-- View Button to open modal -->
-                      <button
-                        class="btn btn-outline-secondary btn-sm ms-2"
-                        data-bs-toggle="modal"
-                        data-bs-target="#projectModal"
-                        onclick="openModal('python-crash-review', 'Solutions of the coding questions in this incredible book.')"
-                      >
-                        View
-                      </button>
-                    </div>
+                    <button
+                      class="btn btn-outline-secondary btn-sm mt-auto"
+                      data-bs-toggle="modal"
+                      data-bs-target="#projectModal"
+                      onclick="openModal(
+                        'Smart Farm Automation Platform',
+                        'Designed an end-to-end IoT automation environment combining edge devices with GCP services (Firestore, Secret Manager, Artifact Registry, Firebase Hosting). Provisioned infrastructure with Terraform, and used GitHub Actions + Ansible to build, deploy and maintain edge and cloud services with automated health checks. Integrated logging and monitoring for telemetry streams using GCP Monitoring dashboards and alert policies.'
+                      )"
+                    >
+                      Details
+                    </button>
                   </div>
                 </div>
               </div>
 
-              <!-- python-crash-review -->
+              <!-- Slack AI Assistant -->
               <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects sub-ml"
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects"
                 style="text-align: justify"
               >
-                <div class="card shadow-sm p-3">
-                  <div class="card-body">
-                    <h4 class="card-title">Python Crash Review</h4>
+                <div class="card shadow-sm p-3 h-100">
+                  <div class="card-body d-flex flex-column">
+                    <h4 class="card-title">Slack AI Assistant</h4>
                     <p class="card-text text-muted mb-1">
-                      Python basics and Data Structures & Algorithms in Python.
+                      RAG-based Slack assistant for internal knowledge queries,
+                      running on containerized infrastructure in GCP.
                     </p>
-
-                    <p class="text-secondary small mb-2">
-                      <i class="bi bi-calendar-event"></i> May 2025
+                    <p class="text-secondary small mb-3">
+                      <i class="bi bi-calendar-event"></i> 2024 – 2025 –
+                      &amp;SHUFL
                     </p>
-
-                    <!-- Buttons Container -->
-                    <div class="button-container">
-                      <a
-                        href="https://github.com/Mohammadalshurbaji/python-crash-review"
-                        class="btn btn-outline-secondary btn-sm"
-                        target="_blank"
-                      >
-                        <i class="bi bi-github"></i> GitHub Repo
-                      </a>
-
-                      <!-- View Button to open modal -->
-                      <button
-                        class="btn btn-outline-secondary btn-sm ms-2"
-                        data-bs-toggle="modal"
-                        data-bs-target="#projectModal"
-                        onclick="openModal('python-crash-review', 'Solutions of the coding questions in this incredible book.')"
-                      >
-                        View
-                      </button>
-                    </div>
+                    <button
+                      class="btn btn-outline-secondary btn-sm mt-auto"
+                      data-bs-toggle="modal"
+                      data-bs-target="#projectModal"
+                      onclick="openModal(
+                        'Slack AI Assistant',
+                        'Built and containerized a Retrieval-Augmented Generation (RAG) Slack assistant using OpenAI and other LLM APIs for internal knowledge queries. Deployed on GCP Cloud Run with Docker images stored in Artifact Registry, and managed secrets via Secret Manager and IAM. Implemented structured logging and metrics to monitor performance, latency and error rates, and tuned autoscaling to minimize cold starts while keeping costs under control.'
+                      )"
+                    >
+                      Details
+                    </button>
                   </div>
                 </div>
               </div>
 
-              <!-- Ace-The-Data-Science-Interview-by-Kevin-Huo---Nick-Singh -->
+              <!-- Cloud Reporting & ERP Automations -->
               <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects sub-ml"
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects"
                 style="text-align: justify"
               >
-                <div class="card shadow-sm p-3">
-                  <div class="card-body">
+                <div class="card shadow-sm p-3 h-100">
+                  <div class="card-body d-flex flex-column">
                     <h4 class="card-title">
-                      Ace The Data Science Interview by Kevin-Huo & Nick Singh
+                      Cloud Reporting &amp; ERP Automations
                     </h4>
                     <p class="card-text text-muted mb-1">
-                      Solutions of the coding questions in this incredible book.
+                      Serverless reporting and automation pipelines for ERP/CRM
+                      data on GCP.
                     </p>
-
-                    <p class="text-secondary small mb-2">
-                      <i class="bi bi-calendar-event"></i> May 2025
+                    <p class="text-secondary small mb-3">
+                      <i class="bi bi-calendar-event"></i> 2024 – 2025 –
+                      &amp;SHUFL
                     </p>
-
-                    <!-- Buttons Container -->
-                    <div class="button-container">
-                      <a
-                        href="https://github.com/Mohammadalshurbaji/Ace-The-Data-Science-Interview-by-Kevin-Huo---Nick-Singh"
-                        class="btn btn-outline-secondary btn-sm"
-                        target="_blank"
-                      >
-                        <i class="bi bi-github"></i> GitHub Repo
-                      </a>
-
-                      <!-- View Button to open modal -->
-                      <button
-                        class="btn btn-outline-secondary btn-sm ms-2"
-                        data-bs-toggle="modal"
-                        data-bs-target="#projectModal"
-                        onclick="openModal('Ace-The-Data-Science-Interview-by-Kevin-Huo---Nick-Singh', 'Solutions of the coding questions in this incredible book.')"
-                      >
-                        View
-                      </button>
-                    </div>
+                    <button
+                      class="btn btn-outline-secondary btn-sm mt-auto"
+                      data-bs-toggle="modal"
+                      data-bs-target="#projectModal"
+                      onclick="openModal(
+                        'Cloud Reporting & ERP Automations',
+                        'Created Dockerized microservices and serverless pipelines on GCP Cloud Functions/Cloud Run to generate PDF/CSV reports from ERP/CRM systems. Automated deployments via GitHub Actions with role-based IAM and structured logging. Reduced manual reporting work and improved data reliability by centralizing business logic and scheduling in the cloud.'
+                      )"
+                    >
+                      Details
+                    </button>
                   </div>
                 </div>
               </div>
 
-              <!-- AtomicDefectSimulations, MS-Research, Dr.Enrique Saez -->
+              <!-- Waste Optimization Platform Backend -->
               <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects sub-ml"
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects"
                 style="text-align: justify"
               >
-                <div class="card shadow-sm p-3">
-                  <div class="card-body">
+                <div class="card shadow-sm p-3 h-100">
+                  <div class="card-body d-flex flex-column">
                     <h4 class="card-title">
-                      AtomicDefectSimulations, MS-Research, Dr.Enrique Saez
+                      Waste Optimization Platform – Backend
                     </h4>
                     <p class="card-text text-muted mb-1">
-                      Simulation and analysis of self-interstitials and
-                      vacancies in composite materials using advanced material
-                      science modeling techniques – Master’s Research under Dr.
-                      Enrique Saez.
+                      Backend infrastructure for a sustainability platform,
+                      focused on API design and data processing.
                     </p>
-                    <p class="text-secondary small mb-2">
-                      <i class="bi bi-calendar-event"></i> May 2025
+                    <p class="text-secondary small mb-3">
+                      <i class="bi bi-calendar-event"></i> 2024 – 2025 –
+                      Egalitarian UNB
                     </p>
-
-                    <!-- Buttons Container -->
-                    <div class="button-container">
-                      <a
-                        href="https://github.com/Mohammadalshurbaji/AtomicDefectSimulations-MS-Research-Dr.Enrique_Saez"
-                        class="btn btn-outline-secondary btn-sm"
-                        target="_blank"
-                      >
-                        <i class="bi bi-github"></i> GitHub Repo
-                      </a>
-
-                      <!-- View Button to open modal -->
-                      <button
-                        class="btn btn-outline-secondary btn-sm ms-2"
-                        data-bs-toggle="modal"
-                        data-bs-target="#projectModal"
-                        onclick="openModal('AtomicDefectSimulations, MS-Research, Dr.Enrique Saez', 'This project is currently under development and is a work in progress.')"
-                      >
-                        View
-                      </button>
-                    </div>
+                    <button
+                      class="btn btn-outline-secondary btn-sm mt-auto"
+                      data-bs-toggle="modal"
+                      data-bs-target="#projectModal"
+                      onclick="openModal(
+                        'Waste Optimization Platform – Backend',
+                        'Developed RESTful APIs with Node.js and Express to handle data flows, user interaction and third-party integrations for a waste optimization platform. Designed and maintained a MongoDB-based backend, implemented authentication and data processing logic, and introduced staging/production pipelines with Docker and automated build/test stages. Documented API endpoints to streamline frontend-backend collaboration.'
+                      )"
+                    >
+                      Details
+                    </button>
                   </div>
                 </div>
               </div>
 
-              <!-- Hybrid-Quntum-Deep-Learning-and-Variatinal-Quantum-Classifier -->
+              <!-- CERTIFICATES -->
+
+              <!-- CCNA -->
               <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects sub-ml"
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-certificates"
                 style="text-align: justify"
               >
-                <div class="card shadow-sm p-3">
-                  <div class="card-body">
+                <div class="card shadow-sm p-3 h-100">
+                  <div class="card-body d-flex flex-column">
                     <h4 class="card-title">
-                      Hybrid Quntum Deep Learning and Variatinal Quantum
-                      Classifier
+                      Cisco CCNA Routing &amp; Switching
                     </h4>
+                    <p class="card-text text-muted mb-1">Issuer: Cisco</p>
                     <p class="card-text text-muted mb-1">
-                      This is a reimplementation and Evaluation of Hybrid
-                      Quantum Deep Learning andVariational Quantum
-                      Classifier-Based Models for Botnet DGA Attack Detection.
+                      Credential ID: 43071791
                     </p>
-                    <p class="text-secondary small mb-2">
-                      <i class="bi bi-calendar-event"></i> May 2025
-                    </p>
-
-                    <!-- Buttons Container -->
-                    <div class="button-container">
-                      <a
-                        href="https://github.com/Mohammadalshurbaji/Hybrid-Quntum-Deep-Learning-and-Variatinal-Quantum-Classifier"
-                        class="btn btn-outline-secondary btn-sm"
-                        target="_blank"
-                      >
-                        <i class="bi bi-github"></i> GitHub Repo
-                      </a>
-
-                      <!-- View Button to open modal -->
-                      <button
-                        class="btn btn-outline-secondary btn-sm ms-2"
-                        data-bs-toggle="modal"
-                        data-bs-target="#projectModal"
-                        onclick="openModal('Hybrid Quntum Deep Learning and Variatinal Quantum Classifier', 'This is a reimplementation and Evaluation of Hybrid Quantum Deep Learning andVariational Quantum Classifier-Based Models for Botnet DGA Attack Detection.')"
-                      >
-                        View
-                      </button>
-                    </div>
                   </div>
                 </div>
               </div>
 
-              <!-- Mind Over Muscle -->
+              <!-- ICT Technician International -->
               <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects sub-ml"
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-certificates"
                 style="text-align: justify"
               >
-                <div class="card shadow-sm p-3">
-                  <div class="card-body">
-                    <h4 class="card-title">Mind Over Muscle</h4>
+                <div class="card shadow-sm p-3 h-100">
+                  <div class="card-body d-flex flex-column">
+                    <h4 class="card-title">ICT Technician International</h4>
                     <p class="card-text text-muted mb-1">
-                      This project leverages data science techniques to explore
-                      the relationship between gym workouts and mental health.
+                      Issuer: Vocational High School of IT, Warsaw – International Programme
                     </p>
-                    <p class="text-secondary small mb-2">
-                      <i class="bi bi-calendar-event"></i> March 2025
+                    <p class="card-text text-muted mb-1">
+                      Credential ID: D/70006786/18
                     </p>
-
-                    <!-- Buttons Container -->
-                    <div class="button-container">
-                      <a
-                        href="https://github.com/Mohammadalshurbaji/Analyzing-the-Impact-of-Gym-Workouts-on-Mental-Health"
-                        class="btn btn-outline-secondary btn-sm"
-                        target="_blank"
-                      >
-                        <i class="bi bi-github"></i> GitHub Repo
-                      </a>
-
-                      <!-- View Button to open modal -->
-                      <button
-                        class="btn btn-outline-secondary btn-sm ms-2"
-                        data-bs-toggle="modal"
-                        data-bs-target="#projectModal"
-                        onclick="openModal('Mind Over Muscle', 'This project is currently under development and is a work in progress.')"
-                      >
-                        View
-                      </button>
-                    </div>
                   </div>
                 </div>
               </div>
 
-              <!-- Stock Market Forecasting -->
+              <!-- IELTS -->
               <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects sub-ml"
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-certificates"
                 style="text-align: justify"
               >
-                <div class="card shadow-sm p-3">
-                  <div class="card-body">
-                    <h4 class="card-title">Stock Market Forecasting</h4>
+                <div class="card shadow-sm p-3 h-100">
+                  <div class="card-body d-flex flex-column">
+                    <h4 class="card-title">IELTS English (C1)</h4>
                     <p class="card-text text-muted mb-1">
-                      This project aims to predict stock market prices using
-                      advanced Deep Learning and Machine Learning techniques.
+                      Issuer: IELTS / British Council
                     </p>
-                    <p class="text-secondary small mb-2">
-                      <i class="bi bi-calendar-event"></i> February 2025
-                    </p>
-
-                    <!-- Buttons Container -->
-                    <div class="button-container">
-                      <a
-                        href="https://github.com/Mohammadalshurbaji/Stock-Market-Forecasting"
-                        class="btn btn-outline-secondary btn-sm"
-                        target="_blank"
-                      >
-                        <i class="bi bi-github"></i> GitHub Repo
-                      </a>
-
-                      <!-- View Button to open modal -->
-                      <button
-                        class="btn btn-outline-secondary btn-sm ms-2"
-                        data-bs-toggle="modal"
-                        data-bs-target="#projectModal"
-                        onclick="openModal('Stock Market Forecasting', 'This project is currently under development and is a work in progress.')"
-                      >
-                        View
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Lazy Predict -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects sub-ml"
-                style="text-align: justify"
-              >
-                <div class="card shadow-sm p-3">
-                  <div class="card-body">
-                    <h4 class="card-title">Lazy Predict</h4>
                     <p class="card-text text-muted mb-1">
-                      Discover the Best ML Model for Your Project in Minutes!
+                      Score: 7.5 — Credential ID: 22PL006473KOPR002A
                     </p>
-                    <p class="text-secondary small mb-2">
-                      <i class="bi bi-calendar-event"></i> January 2025
-                    </p>
-
-                    <!-- Buttons Container -->
-                    <div class="button-container">
-                      <a
-                        href="https://github.com/Mohammadalshurbaji/LazyPredict"
-                        class="btn btn-outline-secondary btn-sm"
-                        target="_blank"
-                      >
-                        <i class="bi bi-github"></i> GitHub Repo
-                      </a>
-
-                      <!-- View Button to open modal -->
-                      <button
-                        class="btn btn-outline-secondary btn-sm ms-2"
-                        style="text-align: justify"
-                        data-bs-toggle="modal"
-                        data-bs-target="#projectModal"
-                        onclick="openModal('Lazy Predict', 'Have you ever wondered which ML model is the most accurate and efficient for your project? It can be quite challenging at times! While scrolling recently, I came across something really interesting that can save us countless hours. By using the LazyPredict method, you can easily run a simplified training test on your dataset to quickly identify the best ML model for your project! It\'s quick, ready to use, and will present the top models along with the most relevant metrics. A real game-changer, right? I had to test it myself, so I tried it on one of the most popular datasets, Load_Iris, and it worked really well. The best part? You can use it for both classification and regression tasks!')"
-                      >
-                        View
-                      </button>
-                    </div>
                   </div>
                 </div>
               </div>
-
-              <!-- Deep Learning in Computational Photography -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects sub-ml"
-                style="text-align: justify"
-              >
-                <div class="card shadow-sm p-3">
-                  <div class="card-body">
-                    <h4 class="card-title">
-                      Deep Learning in Computational Photography
-                    </h4>
-                    <p class="card-text text-muted mb-1">
-                      This project investigates depth estimation from single
-                      images using deep learning methods.
-                    </p>
-                    <p class="text-secondary small mb-2">
-                      <i class="bi bi-calendar-event"></i> December 2025
-                    </p>
-
-                    <!-- Buttons Container -->
-                    <div class="button-container">
-                      <a
-                        href="https://github.com/Mohammadalshurbaji/Deep-Learning-in-Computational-Photography"
-                        class="btn btn-outline-secondary btn-sm"
-                        target="_blank"
-                      >
-                        <i class="bi bi-github"></i> GitHub Repo
-                      </a>
-
-                      <!-- View Button to open modal -->
-                      <button
-                        class="btn btn-outline-secondary btn-sm ms-2"
-                        style="text-align: justify"
-                        data-bs-toggle="modal"
-                        data-bs-target="#projectModal"
-                        onclick="openModal('Deep Learning in Computational Photography', 'Motivation: Accurate depth perception is crucial for various applications, including robotics, autonomous driving, and augmented reality. Traditional methods often rely on expensive and bulky hardware. This project aims to leverage the power of deep learning to achieve robust and cost-effective depth estimation from single images.')"
-                      >
-                        View
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Data Completion in Financial Time Series -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects sub-ml"
-                style="text-align: justify"
-              >
-                <div class="card shadow-sm p-3">
-                  <div class="card-body">
-                    <h4 class="card-title">
-                      Data Completion in Financial Time Series
-                    </h4>
-                    <p class="card-text text-muted mb-1">
-                      This project investigates the application of data
-                      completion techniques for portfolio management and risk
-                      modeling.
-                    </p>
-                    <p class="text-secondary small mb-2">
-                      <i class="bi bi-calendar-event"></i> December 2025
-                    </p>
-
-                    <!-- Buttons Container -->
-                    <div class="button-container">
-                      <a
-                        href="https://github.com/Mohammadalshurbaji/Data-Completion-for-Portfolio-Optimization"
-                        class="btn btn-outline-secondary btn-sm"
-                        target="_blank"
-                      >
-                        <i class="bi bi-github"></i> GitHub Repo
-                      </a>
-
-                      <!-- View Button to open modal -->
-                      <button
-                        class="btn btn-outline-secondary btn-sm ms-2"
-                        style="text-align: justify"
-                        data-bs-toggle="modal"
-                        data-bs-target="#projectModal"
-                        onclick="openModal('Data Completion in Financial Time Series', 'Driven by a passion for finance and the stock market, this project explores portfolio management and risk modeling using low-rank matrix completion with nuclear norm minimization.')"
-                      >
-                        View
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Advanced Machine Learning - CPSC 8420 -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects sub-ml"
-                style="text-align: justify"
-              >
-                <div class="card shadow-sm p-3">
-                  <div class="card-body">
-                    <h4 class="card-title">
-                      Advanced Machine Learning - CPSC 8420
-                    </h4>
-                    <p class="card-text text-muted mb-1">
-                      This repo documents my journey through CPSC 8420: Advanced
-                      Machine Learning.
-                    </p>
-                    <p class="text-secondary small mb-2">
-                      <i class="bi bi-calendar-event"></i> December 2025
-                    </p>
-
-                    <!-- Buttons Container -->
-                    <div class="button-container">
-                      <a
-                        href="https://github.com/Mohammadalshurbaji/Advanced-Machine-Learning-CPSC8420"
-                        class="btn btn-outline-secondary btn-sm"
-                        target="_blank"
-                      >
-                        <i class="bi bi-github"></i> GitHub Repo
-                      </a>
-
-                      <!-- View Button to open modal -->
-                      <button
-                        class="btn btn-outline-secondary btn-sm ms-2"
-                        style="text-align: justify"
-                        data-bs-toggle="modal"
-                        data-bs-target="#projectModal"
-                        onclick="openModal('Advanced Machine Learning', 'This rigorous course delved into the mathematical and coding foundations of ML. The assignmentsand final exam demonstrate the practical application ofthese concepts. I highly recommend this course to anyoneseeking a deeper understanding of machine learning.')"
-                      >
-                        View
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Nesterov’s Accelerated Gradient Descent for Convex Programming -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects sub-ml"
-                style="text-align: justify"
-              >
-                <div class="card shadow-sm p-3">
-                  <div class="card-body">
-                    <h4 class="card-title">
-                      Nesterov’s Accelerated Gradient Descent for Convex
-                      Programming
-                    </h4>
-                    <p class="card-text text-muted mb-1">
-                      This project explores the implementation of Nesterov’s
-                      Accelerated Gradient Descent.
-                    </p>
-                    <p class="text-secondary small mb-2">
-                      <i class="bi bi-calendar-event"></i> December 2025
-                    </p>
-
-                    <!-- Buttons Container -->
-                    <div class="button-container">
-                      <a
-                        href="https://github.com/Mohammadalshurbaji/Machine-Learning-Optimization-CPSC-8810"
-                        class="btn btn-outline-secondary btn-sm"
-                        target="_blank"
-                      >
-                        <i class="bi bi-github"></i> GitHub Repo
-                      </a>
-
-                      <!-- View Button to open modal -->
-                      <button
-                        class="btn btn-outline-secondary btn-sm ms-2"
-                        style="text-align: justify"
-                        data-bs-toggle="modal"
-                        data-bs-target="#projectModal"
-                        onclick="openModal('Nesterov Accelerated Gradient Descent for Convex Programming', 'This project explores the implementation and analysis of Nesterov’s Accelerated Gradient Descent, an advanced optimization algorithm introduced in 1983. Designed to tackle convex programming problems, this method significantly improves convergence rates compared to traditional gradient descent, setting a new standard in optimization techniques.')"
-                      >
-                        View
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Predicting Hearing Loss Using MRI Images -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects sub-ml"
-                style="text-align: justify"
-              >
-                <div class="card shadow-sm p-3">
-                  <div class="card-body">
-                    <h4 class="card-title">
-                      Predicting Hearing Loss Using MRI Images
-                    </h4>
-                    <p class="card-text text-muted mb-1">
-                      This project focuses on predicting hearing loss using MRI
-                      images. It was developed as part of a team effort for the
-                      Data Mining class.
-                    </p>
-                    <p class="text-secondary small mb-2">
-                      <i class="bi bi-calendar-event"></i> May 2025
-                    </p>
-
-                    <!-- Buttons Container -->
-                    <div class="button-container">
-                      <a
-                        href="https://github.com/Mohammadalshurbaji/Predicting-Hearing-Loss-A-Data-Driven-Approach-with-Deep-Learning"
-                        class="btn btn-outline-secondary btn-sm"
-                        target="_blank"
-                      >
-                        <i class="bi bi-github"></i> GitHub Repo
-                      </a>
-
-                      <!-- View Button to open modal -->
-                      <button
-                        class="btn btn-outline-secondary btn-sm ms-2"
-                        style="text-align: justify"
-                        data-bs-toggle="modal"
-                        data-bs-target="#projectModal"
-                        onclick="openModal('Predicting Hearing Loss Using MRI Images', 'This project focuses on predicting hearing loss using MRI images. It was developed as part of a team effort for the Data Mining class. The project showcases three deep learning techniques with the aim to demonstrate that Convolutional Neural Networks (CNN) are the best model for processing MRI images. The model development process included steps such as data cleaning, preprocessing, model building, training, and evaluation, concluding with data visualization to assess the model’s performance.')"
-                      >
-                        View
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Pizza Restaurant Database Management System -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects sub-ml"
-                style="text-align: justify"
-              >
-                <div class="card shadow-sm p-3">
-                  <div class="card-body">
-                    <h4 class="card-title">
-                      Pizza Restaurant Database Management
-                    </h4>
-                    <p class="card-text text-muted mb-1">
-                      This project is a relational database management system
-                      (RDBMS) designed for a pizza restaurant as part of our
-                      Database Management Systems course.
-                    </p>
-                    <p class="text-secondary small mb-2">
-                      <i class="bi bi-calendar-event"></i> December 2023
-                    </p>
-
-                    <!-- Buttons Container -->
-                    <div class="button-container">
-                      <a
-                        href="https://github.com/Mohammadalshurbaji/Database-Management-Systems"
-                        class="btn btn-outline-secondary btn-sm"
-                        target="_blank"
-                      >
-                        <i class="bi bi-github"></i> GitHub Repo
-                      </a>
-
-                      <!-- View Button to open modal -->
-                      <button
-                        class="btn btn-outline-secondary btn-sm ms-2"
-                        style="text-align: justify"
-                        data-bs-toggle="modal"
-                        data-bs-target="#projectModal"
-                        onclick="openModal('Pizza Restaurant Database Management', 'This project is a relational database management system (RDBMS) designed for a pizza restaurant as part of our Database Management Systems course. The primary goal was to develop a fully functional system using MySQL and Java, capable of managing customer orders, inventory, and reporting.')"
-                      >
-                        View
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Smart Selector - Portfolio Optimizer -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects sub-ml"
-                style="text-align: justify"
-              >
-                <div class="card shadow-sm p-3">
-                  <div class="card-body">
-                    <h4 class="card-title">
-                      Smart Selector - Portfolio Optimizer
-                    </h4>
-                    <p class="card-text text-muted mb-1">
-                      This project was created for the Georgia Tech Hackathon by
-                      our team, Infinity, who are passionate about the finance
-                      industry.
-                    </p>
-                    <p class="text-secondary small mb-2">
-                      <i class="bi bi-calendar-event"></i> March 2024
-                    </p>
-
-                    <!-- Buttons Container -->
-                    <div class="button-container">
-                      <a
-                        href="https://github.com/Mohammadalshurbaji/Smart-Selector---Portfolio-Optimizer-"
-                        class="btn btn-outline-secondary btn-sm"
-                        target="_blank"
-                      >
-                        <i class="bi bi-github"></i> GitHub Repo
-                      </a>
-
-                      <!-- View Button to open modal -->
-                      <button
-                        class="btn btn-outline-secondary btn-sm ms-2"
-                        style="text-align: justify"
-                        data-bs-toggle="modal"
-                        data-bs-target="#projectModal"
-                        onclick="openModal('Smart Selector - Portfolio Optimizer', 'This project was created for the Georgia Tech Hackathon by our team, Infinity, who are passionate about the finance industry. We decided to build an entry-level application that takes your investment amount and risk tolerance, and, based on those inputs, provides the optimal portfolio for you.')"
-                      >
-                        View
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Exploring Wine Reviews in California -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects sub-ml"
-                style="text-align: justify"
-              >
-                <div class="card shadow-sm p-3">
-                  <div class="card-body">
-                    <h4 class="card-title">
-                      Exploring Wine Reviews in California
-                    </h4>
-                    <p class="card-text text-muted mb-1">
-                      This project was developed as part of our Data
-                      Visualization class to explore the vast world of wine
-                      reviews through interactive data storytelling.
-                    </p>
-                    <p class="text-secondary small mb-2">
-                      <i class="bi bi-calendar-event"></i> March 2024
-                    </p>
-
-                    <!-- Buttons Container -->
-                    <div class="button-container">
-                      <a
-                        href="https://github.com/Mohammadalshurbaji/Exploring-the-World-of-Wine-Through-Data-Visualization"
-                        class="btn btn-outline-secondary btn-sm"
-                        target="_blank"
-                      >
-                        <i class="bi bi-github"></i> GitHub Repo
-                      </a>
-
-                      <!-- View Button to open modal -->
-                      <button
-                        class="btn btn-outline-secondary btn-sm ms-2"
-                        style="text-align: justify"
-                        data-bs-toggle="modal"
-                        data-bs-target="#projectModal"
-                        onclick="openModal('Exploring Wine Reviews in California', 'This project was developed as part of our Data Visualization class to explore the vast world of wine reviews through interactive data storytelling. Using D3.js and Tableau, we created an interactive website to analyze wine varieties, pricing trends, ratings, and winery distributions - all centered around California’s wine industry. What makes this project even more unique is that neither of us drinks alcohol! That made our curiosity-driven approach even more fascinating. We sought to understand how people perceive wine, what influences its price and ratings, and which wineries dominate California’s wine production.')"
-                      >
-                        View
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Cert 0 -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tech"
-              >
-                <div class="card shadow-sm">
-                  <div class="thumbnail-container">
-                    <img
-                      src="assets/img/Projects/Advanced C# Programming in DOT NET Core.jpg"
-                      class="card-img-top img-fluid"
-                      alt="Recommendation Letter"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <h4 class="card-title">
-                      Advanced C# Programming in .NET Core Certificate
-                    </h4>
-                    <p class="card-text">EDUCBA</p>
-                    <a
-                      href="assets/img/Projects/AdvancedProgrammingCore.jpg"
-                      title="Tech Certificate - C#"
-                      data-gallery="portfolio-gallery-recommendations"
-                      class="glightbox btn btn-outline-secondary"
-                      ><i class="bi bi-zoom-in"></i> View</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <!-- End Cert 0 -->
-
-              <!-- Cert 1 -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tech"
-              >
-                <div class="card shadow-sm">
-                  <div class="thumbnail-container">
-                    <img
-                      src="assets/img/Projects/cea.jpeg"
-                      class="card-img-top img-fluid"
-                      alt="Recommendation Letter"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <h4 class="card-title">CEA Certificate</h4>
-                    <p class="card-text">AEE</p>
-                    <a
-                      href="assets/img/Projects/cea.jpeg"
-                      title="Tech Certificate - CEA"
-                      data-gallery="portfolio-gallery-recommendations"
-                      class="glightbox btn btn-outline-secondary"
-                      ><i class="bi bi-zoom-in"></i> View</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <!-- End Cert 1 -->
-
-              <!-- Cert 2 -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tech"
-              >
-                <div class="card shadow-sm">
-                  <div class="thumbnail-container">
-                    <img
-                      src="assets/img/Projects/CEAt.jpg"
-                      class="card-img-top img-fluid"
-                      alt="Recommendation Letter"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <h4 class="card-title">CEA Training Certificate</h4>
-                    <p class="card-text">AEE</p>
-                    <a
-                      href="assets/img/Projects/CEAt.jpg"
-                      title="Tech Certificate - CEA Training"
-                      data-gallery="portfolio-gallery-recommendations"
-                      class="glightbox btn btn-outline-secondary"
-                      ><i class="bi bi-zoom-in"></i> View</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <!-- End Cert 2 -->
-
-              <!-- Cert 3 -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tech"
-              >
-                <div class="card shadow-sm">
-                  <div class="thumbnail-container">
-                    <img
-                      src="assets/img/Projects/AWS Cloud Practitioner Essentials.jpg"
-                      class="card-img-top img-fluid"
-                      alt="Recommendation Letter"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <h4 class="card-title">
-                      AWS Cloud Practitioner Essentials
-                    </h4>
-                    <p class="card-text">AWS</p>
-                    <a
-                      href="assets/img/Projects/AWS Cloud Practitioner Essentials.jpg"
-                      title="Tech Certificate - AWS Cloud Practitioner Essentials"
-                      data-gallery="portfolio-gallery-recommendations"
-                      class="glightbox btn btn-outline-secondary"
-                      ><i class="bi bi-zoom-in"></i> View</a
-                    >
-                  </div>
-                </div>
-              </div>
-
-              <!-- Cert 4 -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tech"
-              >
-                <div class="card shadow-sm">
-                  <div class="thumbnail-container">
-                    <img
-                      src="assets/img/Projects/Ignition.PNG"
-                      class="card-img-top img-fluid"
-                      alt="Recommendation Letter"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <h4 class="card-title">Ignition 8.1 Credential</h4>
-                    <p class="card-text">Inductive University</p>
-                    <a
-                      href="assets/img/Projects/Ignition.PNG"
-                      title="Tech Certificate - Ignition"
-                      data-gallery="portfolio-gallery-recommendations"
-                      class="glightbox btn btn-outline-secondary"
-                      ><i class="bi bi-zoom-in"></i> View</a
-                    >
-                  </div>
-                </div>
-              </div>
-
-              <!-- Cert 3 -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-soft"
-              >
-                <div class="card shadow-sm">
-                  <div class="thumbnail-container">
-                    <img
-                      src="assets/img/Projects/leader.jpeg"
-                      class="card-img-top img-fluid"
-                      alt="Recommendation Letter"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <h4 class="card-title">Certified Student Leader</h4>
-                    <p class="card-text">Clemson University</p>
-                    <a
-                      href="assets/img/Projects/leader.jpeg"
-                      title="Soft Certificate - Leadership"
-                      data-gallery="portfolio-gallery-recommendations"
-                      class="glightbox btn btn-outline-secondary"
-                      ><i class="bi bi-zoom-in"></i> View</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <!-- End Cert 3 -->
-
-              <!-- Cert 4 -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-soft"
-              >
-                <div class="card shadow-sm">
-                  <div class="thumbnail-container">
-                    <img
-                      src="assets/img/Projects/agile.jpg"
-                      class="card-img-top img-fluid"
-                      alt="Recommendation Letter"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <h4 class="card-title">Agile Project Management</h4>
-                    <p class="card-text">Google</p>
-                    <a
-                      href="assets/img/Projects/agile.jpg"
-                      title="Soft Certificate - Agile"
-                      data-gallery="portfolio-gallery-recommendations"
-                      class="glightbox btn btn-outline-secondary"
-                      ><i class="bi bi-zoom-in"></i> View</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <!-- End Cert 4 -->
-
-              <!-- Cert 5 -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tech"
-              >
-                <div class="card shadow-sm">
-                  <div class="thumbnail-container">
-                    <img
-                      src="assets/img/Projects/nn.jpg"
-                      class="card-img-top img-fluid"
-                      alt="Recommendation Letter"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <h4 class="card-title">
-                      Neural Networks and Deep Learning
-                    </h4>
-                    <p class="card-text">DeepLearning.AI</p>
-                    <a
-                      href="assets/img/Projects/nn.jpg"
-                      title="Tech Certificate - NN"
-                      data-gallery="portfolio-gallery-recommendations"
-                      class="glightbox btn btn-outline-secondary"
-                      ><i class="bi bi-zoom-in"></i> View</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <!-- End Cert 5 -->
-
-              <!-- Cert 6 -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tech"
-              >
-                <div class="card shadow-sm">
-                  <div class="thumbnail-container">
-                    <img
-                      src="assets/img/Projects/powerbi.jpg"
-                      class="card-img-top img-fluid"
-                      alt="Recommendation Letter"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <h4 class="card-title">
-                      Harnessing the Power of Data with Power BI
-                    </h4>
-                    <p class="card-text">Microsoft</p>
-                    <a
-                      href="assets/img/Projects/powerbi.jpg"
-                      title="Tech Certificate - Power BI"
-                      data-gallery="portfolio-gallery-recommendations"
-                      class="glightbox btn btn-outline-secondary"
-                      ><i class="bi bi-zoom-in"></i> View</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <!-- End Cert 6 -->
-
-              <!-- Cert 7 -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tech"
-              >
-                <div class="card shadow-sm">
-                  <div class="thumbnail-container">
-                    <img
-                      src="assets/img/Projects/bpython.jpg"
-                      class="card-img-top img-fluid"
-                      alt="Recommendation Letter"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <h4 class="card-title">Python Basics</h4>
-                    <p class="card-text">University of Michigan</p>
-                    <a
-                      href="assets/img/Projects/bpython.jpg"
-                      title="Tech Certificate - Py Basics"
-                      data-gallery="portfolio-gallery-recommendations"
-                      class="glightbox btn btn-outline-secondary"
-                      ><i class="bi bi-zoom-in"></i> View</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <!-- End Cert 7 -->
-
-              <!-- Cert 8 -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tech"
-              >
-                <div class="card shadow-sm">
-                  <div class="thumbnail-container">
-                    <img
-                      src="assets/img/Projects/programming.jpg"
-                      class="card-img-top img-fluid"
-                      alt="Recommendation Letter"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <h4 class="card-title">Programming for Everybody</h4>
-                    <p class="card-text">University of Michigan</p>
-                    <a
-                      href="assets/img/Projects/prgoramming.jpg"
-                      title="Tech Certificate - Py Basics"
-                      data-gallery="portfolio-gallery-recommendations"
-                      class="glightbox btn btn-outline-secondary"
-                      ><i class="bi bi-zoom-in"></i> View</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <!-- End Cert 8 -->
-
-              <!-- Cert 8 -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tech"
-              >
-                <div class="card shadow-sm">
-                  <div class="thumbnail-container">
-                    <img
-                      src="assets/img/Projects/python.jpg"
-                      class="card-img-top img-fluid"
-                      alt="Recommendation Letter"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <h4 class="card-title">Python Data Structures</h4>
-                    <p class="card-text">University of Michigan</p>
-                    <a
-                      href="assets/img/Projects/python.jpg"
-                      title="Tech Certificate - Py Data Structures"
-                      data-gallery="portfolio-gallery-recommendations"
-                      class="glightbox btn btn-outline-secondary"
-                      ><i class="bi bi-zoom-in"></i> View</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <!-- End Cert 8 -->
-
-              <!-- Cert 7 -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-Endorsements"
-              >
-                <div class="card shadow-sm">
-                  <div class="thumbnail-container">
-                    <img
-                      src="assets/img/Projects/arison.jpg"
-                      class="card-img-top img-fluid"
-                      alt="Recommendation Letter"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <h4 class="card-title">Endorsement - Arison</h4>
-                    <p class="card-text">Arison Company</p>
-                    <a
-                      href="assets/img/Projects/arison.jpg"
-                      title="Endorsement Letter - Arison"
-                      data-gallery="portfolio-gallery-recommendations"
-                      class="glightbox btn btn-outline-secondary"
-                      ><i class="bi bi-zoom-in"></i> View</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <!-- End Cert 7 -->
-
-              <!-- Cert 7 -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-Endorsements"
-              >
-                <div class="card shadow-sm">
-                  <div class="thumbnail-container">
-                    <img
-                      src="assets/img/Projects/rasha.jpg"
-                      class="card-img-top img-fluid"
-                      alt="Recommendation Letter"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <h4 class="card-title">
-                      Endorsement - University of Jordan
-                    </h4>
-                    <p class="card-text">University of Jordan</p>
-                    <a
-                      href="assets/img/Projects/rasha.jpg"
-                      title="Endorsement Letter - University of Jordan"
-                      data-gallery="portfolio-gallery-recommendations"
-                      class="glightbox btn btn-outline-secondary"
-                      ><i class="bi bi-zoom-in"></i> View</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <!-- End Cert 7 -->
-
-              <!-- Cert 7 -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-Endorsements"
-              >
-                <div class="card shadow-sm">
-                  <div class="thumbnail-container">
-                    <img
-                      src="assets/img/Projects/jamil.jpg"
-                      class="card-img-top img-fluid"
-                      alt="Recommendation Letter"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <h4 class="card-title">
-                      Endorsement - University of Jordan
-                    </h4>
-                    <p class="card-text">University of Jordan</p>
-                    <a
-                      href="assets/img/Projects/jamil.jpg"
-                      title="Endorsement Letter - University of Jordan"
-                      data-gallery="portfolio-gallery-recommendations"
-                      class="glightbox btn btn-outline-secondary"
-                      ><i class="bi bi-zoom-in"></i> View</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <!-- End Cert 7 -->
-
-              <!-- Cert 8 -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-Endorsements"
-              >
-                <div class="card shadow-sm">
-                  <div class="thumbnail-container">
-                    <img
-                      src="assets/img/Projects/iaeste.jpg"
-                      class="card-img-top img-fluid"
-                      alt="Recommendation Letter"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <h4 class="card-title">Endorsement - IAESTE</h4>
-                    <p class="card-text">IAESTE</p>
-                    <a
-                      href="assets/img/Projects/iaeste.jpg"
-                      title="Endorsement Letter - IAESTE"
-                      data-gallery="portfolio-gallery-recommendations"
-                      class="glightbox btn btn-outline-secondary"
-                      ><i class="bi bi-zoom-in"></i> View</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <!-- End Cert 8 -->
-
-              <!-- Cert 9 -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tech"
-              >
-                <div class="card shadow-sm">
-                  <div class="thumbnail-container">
-                    <img
-                      src="assets/img/Projects/OrangeFabLab.jpg"
-                      class="card-img-top img-fluid"
-                      alt="Recommendation Letter"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <h4 class="card-title">CAD & 3D Printing</h4>
-                    <p class="card-text">Orange</p>
-                    <a
-                      href="assets/img/Projects/OrangeFabLab.jpg"
-                      title="Tech Certificate - CAD Printing"
-                      data-gallery="portfolio-gallery-recommendations"
-                      class="glightbox btn btn-outline-secondary"
-                      ><i class="bi bi-zoom-in"></i> View</a
-                    >
-                  </div>
-                </div>
-              </div>
-
-              <!-- Cert 10 -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tech"
-              >
-                <div class="card shadow-sm">
-                  <div class="thumbnail-container">
-                    <img
-                      src="assets/img/Projects/cont.jpg"
-                      class="card-img-top img-fluid"
-                      alt="Recommendation Letter"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <h4 class="card-title">ACPC Hackathon</h4>
-                    <p class="card-text">ACPC</p>
-                    <a
-                      href="assets/img/Projects/cont.jpg"
-                      title="Tech Certificate"
-                      data-gallery="portfolio-gallery-recommendations"
-                      class="glightbox btn btn-outline-secondary"
-                      ><i class="bi bi-zoom-in"></i> View</a
-                    >
-                  </div>
-                </div>
-              </div>
-
-              <!-- End Cert 9 -->
             </div>
-            <!-- End Portfolio Container -->
+            <!-- End isotope container -->
           </div>
         </div>
       </section>
-      <!-- <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const filters = document.querySelectorAll(".portfolio-filters li");
-          const subTabWrapper = document.getElementById("project-sub-tabs");
-          const subTabs = document.querySelectorAll(".sub-tab");
-          const isoContainer = document.querySelector(".isotope-container");
+      <!-- /Portfolio Section -->
 
-          let iso;
 
-          imagesLoaded(isoContainer, function () {
-            iso = new Isotope(isoContainer, {
-              itemSelector: ".portfolio-item",
-              layoutMode: "masonry",
-            });
-            iso.arrange({ filter: ".filter-projects" }); // Default to Projects
-          });
 
-          filters.forEach((filter) => {
-            filter.addEventListener("click", function () {
-              if (this.dataset.filter === ".filter-projects") {
-                subTabWrapper.classList.remove("d-none");
-                document.querySelector(".sub-tab[data-subtab='all']").click();
-              } else {
-                subTabWrapper.classList.add("d-none");
-              }
-            });
-          });
 
-          subTabs.forEach((tab) => {
-            tab.addEventListener("click", function () {
-              subTabs.forEach((t) => t.classList.remove("active"));
-              this.classList.add("active");
 
-              const subFilter = this.dataset.subtab;
-              iso.arrange({
-                filter: function (itemElem) {
-                  return (
-                    itemElem.classList.contains("filter-projects") &&
-                    (subFilter === "all" ||
-                      itemElem.classList.contains(`sub-${subFilter}`))
-                  );
-                },
-              });
-            });
-          });
-        });
-      </script> -->
-      <!-- End Portfolio Section -->
+
 
       <!-- Contact Section -->
       <section id="contact" class="contact section">
@@ -1957,8 +855,8 @@
               >
                 <i class="bi bi-telephone flex-shrink-0"></i>
                 <div>
-                  <h3>Call Us</h3>
-                  <p>+1 864 790 3296</p>
+                  <h3>Call Me</h3>
+                  <p>+45 91 74 48 53</p>
                 </div>
               </div>
               <!-- End Info Item -->
@@ -1970,8 +868,8 @@
               >
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
-                  <h3>Email Us</h3>
-                  <p>malshur@clemson.edu</p>
+                  <h3>Email Me</h3>
+                  <p>remikoppel@gmail.com</p>
                 </div>
               </div>
               <!-- End Info Item -->
